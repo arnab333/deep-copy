@@ -1,4 +1,4 @@
-import deepCopy, { DeepCopyArray, DeepCopyObject } from '../src/index';
+import { DeepCopyArray, DeepCopyObject, deepCopy } from '../src/index';
 
 describe('Deep Copy Recursive', () => {
   it('should be able to create a deep copy of array with nested object', () => {
