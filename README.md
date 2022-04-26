@@ -1,4 +1,4 @@
-# @arnab333/deepcopy [![NPM version](https://img.shields.io/npm/v/@arnab333/deepcopy.svg?style=flat)](https://www.npmjs.com/package/@arnab333/deepcopy)
+# @arnab333/deep-copy [![NPM version](https://img.shields.io/npm/v/@arnab333/deep-copy.svg?style=flat)](https://www.npmjs.com/package/@arnab333/deep-copy)
 
 > Recursively (deep) copy JavaScript native types, like Object, Array, RegExp, Date as well as primitives.
 
@@ -7,16 +7,16 @@
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-$ npm install @arnab333/deepcopy
+$ npm install @arnab333/deep-copy
 ```
 
 ## Usage
 
 ```js
-const deepCopy = require('@arnab333/deepcopy');
-const { deepCopy } = require('@arnab333/deepcopy');
-import { deepCopy } from '@arnab333/deepcopy';
-import deepCopy from '@arnab333/deepcopy';
+const deepCopy = require('@arnab333/deep-copy');
+const { deepCopy } = require('@arnab333/deep-copy');
+import { deepCopy } from '@arnab333/deep-copy';
+import deepCopy from '@arnab333/deep-copy';
 
 let obj = { a: 'b' };
 let arr = [obj];

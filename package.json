@@ -21,11 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnab333/deepcopy.git"
+    "url": "https://github.com/arnab333/deep-copy.git"
   },
-  "homepage": "https://github.com/arnab333/deepcopy",
+  "homepage": "https://github.com/arnab333/deep-copy",
   "keywords": [
-    "deepcopy",
+    "deeCopy",
     "deep-copy",
     "deepClone",
     "deep-clone"
@@ -41,16 +41,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@arnab333/deepcopy",
+  "name": "@arnab333/deep-copy",
   "author": "arnab333",
-  "module": "dist/deepcopy.esm.js",
+  "module": "dist/deep-copy.esm.js",
   "size-limit": [
     {
-      "path": "dist/deepcopy.cjs.production.min.js",
+      "path": "dist/deep-copy.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/deepcopy.esm.js",
+      "path": "dist/deep-copy.esm.js",
       "limit": "10 KB"
     }
   ],
