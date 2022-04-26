@@ -6,7 +6,7 @@ export type DeepCopyArray = any[];
 
 export type DeepCopy = DeepCopyObject | DeepCopyArray;
 
-export function deepCopy<T extends DeepCopy>(original: T): T {
+function deepCopy<T extends DeepCopy>(original: T): T {
   let deepCopied: any = original;
   if (isArray(deepCopied)) {
     deepCopied = deepCopied.map((el: T) => {
@@ -54,5 +54,7 @@ function isObject(data: DeepCopy): data is DeepCopyObject {
 function isArray(data: DeepCopy): data is DeepCopyArray {
   return Array.isArray(data);
 }
+
+export { deepCopy };
 
 export default deepCopy;
