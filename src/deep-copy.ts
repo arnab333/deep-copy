@@ -42,7 +42,12 @@ function deepCopyArray<T extends DeepCopyArray>(arr: T): T {
 }
 
 function isObject(data: DeepCopy): data is DeepCopyObject {
-  return typeof data === 'object' && !isArray(data) && !(data instanceof Date);
+  return (
+    data !== null &&
+    typeof data === 'object' &&
+    !isArray(data) &&
+    !(data instanceof Date)
+  );
 }
 
 function isArray(data: DeepCopy): data is DeepCopyArray {

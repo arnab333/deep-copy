@@ -14,8 +14,11 @@ $ npm install @arnab333/deep-copy
 
 ```js
 const deepCopy = require('@arnab333/deep-copy');
+// OR
 const { deepCopy } = require('@arnab333/deep-copy');
+// OR
 import { deepCopy } from '@arnab333/deep-copy';
+// OR
 import deepCopy from '@arnab333/deep-copy';
 
 let obj = { a: 'b' };

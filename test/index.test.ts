@@ -8,6 +8,7 @@ describe('Deep Copy Recursive', () => {
       24,
       {
         date: new Date(),
+        nullCheck: null,
         location: {
           city: 'tampa',
           testObj: {
@@ -27,6 +28,7 @@ describe('Deep Copy Recursive', () => {
     deepCopied[2].location.city = 'orlando';
     deepCopied[3][0] = 'testing';
     deepCopied[2].childArray[0] = 'update';
+    deepCopied[2].nullCheck = 'passing';
     deepCopied[2].location.testObj.welcome = 'Hello World!';
     deepCopied[2].location.testObj.nested3rdObj.val[0] = 'checking!';
     deepCopied[2].location.testObj.nested3rdObj.val[1].newObj = 'fourth level!';
@@ -39,6 +41,9 @@ describe('Deep Copy Recursive', () => {
 
     expect(original[2].childArray[0]).toBe(6);
     expect(deepCopied[2].childArray[0]).toBe('update');
+
+    expect(original[2].nullCheck).toBe(null);
+    expect(deepCopied[2].nullCheck).toBe('passing');
 
     expect(original[2].location.testObj.welcome).toBe('yo');
     expect(deepCopied[2].location.testObj.welcome).toBe('Hello World!');
@@ -59,6 +64,7 @@ describe('Deep Copy Recursive', () => {
   it('should be able to create a deep copy of object with nested object', () => {
     let original: DeepCopyObject = {
       date: new Date(),
+      nullCheck: null,
       location: {
         city: 'tampa',
         testObj: {
@@ -74,6 +80,7 @@ describe('Deep Copy Recursive', () => {
     let deepCopied = deepCopy(original);
 
     deepCopied.location.city = 'orlando';
+    deepCopied.nullCheck = 'passing';
     deepCopied.childArray[0] = 'update';
     deepCopied.location.testObj.welcome = 'Hello World!';
     deepCopied.location.testObj.nested3rdObj.val[0] = 'checking!';
@@ -81,6 +88,9 @@ describe('Deep Copy Recursive', () => {
 
     expect(original.location.city).toBe('tampa');
     expect(deepCopied.location.city).toBe('orlando');
+
+    expect(original.nullCheck).toBe(null);
+    expect(deepCopied.nullCheck).toBe('passing');
 
     expect(original.childArray[0]).toBe(6);
     expect(deepCopied.childArray[0]).toBe('update');
